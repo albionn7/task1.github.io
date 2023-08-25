@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --primary-color: #aeada1;
+    --secondary-color: #624c44;
+    --background-color: #f7f7f7;
+    --footer-color: #333;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+  }
+
+  header {
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 60px;
+    text-align: center;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .sidebar {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+
+  .content {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: pulse 1.5s infinite;
+  }
+
+  .button:hover {
+    background-color: var(--secondary-color);
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 20px;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .feature img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .feature-text {
+    font-size: 18px;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  footer {
+    background-color: var(--footer-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<title>Responsive Page</title>
+</head>
+<body>
+  <header>
+    <h1>Responsive Page</h1>
+  </header>
+  <main>
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>This is the sidebar content.</p>
+    </div>
+    <div class="content">
+      <h2>Content Area</h2>
+      <p>This is the main content area. It has an animated button.</p>
+      <button class="button">Hover Me</button>
+    </div>
+  </main>
+  <div class="feature">
+    <img src="https://unsplash.it/900/300" alt="Feature Image" >
+    <div class="feature-text">
+      <h2>Feature Title</h2>
+      <p>This is the description of the feature. It can be a brief explanation of the image or content.</p>
+    </div>
+  </div>
+  <div class="feature">
+        <div class="feature-text">
+          <h2>Feature Title</h2>
+          <p>This is the description of the feature. It can be a brief explanation of the image or content.</p>
+        </div>
+    <img src="https://unsplash.it/910/300" alt="Feature Image" >
+  </div>
+  <footer>
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>
